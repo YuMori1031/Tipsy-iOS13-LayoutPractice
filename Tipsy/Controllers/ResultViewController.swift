@@ -10,18 +10,18 @@ import UIKit
 
 class ResultViewController: UIViewController {
     
-    var totalValue: String?
-    var tip: String?
-    var split: String?
-    
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var settingsLabel: UILabel!
+    
+    var result = "0.00"
+    var tip = 10
+    var people = 2
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        totalLabel.text = totalValue
-        settingsLabel.text = "Split between \(split!) people, with \(tip!) tip."
+        totalLabel.text = result
+        settingsLabel.text = "Split between \(people) people, with \(tip)% tip."
     }
     
     @IBAction func recalculatePressed(_ sender: UIButton) {
